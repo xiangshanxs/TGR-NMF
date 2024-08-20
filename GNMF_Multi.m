@@ -87,10 +87,10 @@ while tryNo < nRepeat
     end
 end
 
-[U_final,V_final] = NormalizeUV(U_final, V_final, NormV, Norm);
+[U_final,V_final] = UnitizationUV(U_final, V_final, NormV, Norm);
 
 
-function [U, V] = NormalizeUV(U, V, NormV, Norm)
+function [U, V] = UnitizationUV(U, V, NormV, Norm)
     K = size(U,2);
     if Norm == 2
             norms = max(1e-15,sqrt(sum(U.^2,1)))';   
