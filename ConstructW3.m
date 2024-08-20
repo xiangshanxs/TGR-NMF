@@ -3,14 +3,14 @@ function W = ConstructW3(fea,options)
    if ~isfield(options,'bSelfConnected')
         options.bSelfConnected = 0;   
    end
-   if ~isfield(options,'bNormalized')
-    options.bNormalized = 0;
+   if ~isfield(options,'bUnitizated')
+    options.bUnitizated = 0;
    end   
 %=================================================
       bCosine = 1;
       nSmp = size(fea,1);  
-   if bCosine && ~options.bNormalized   
-      Normfea = NormalizeFea(fea);
+   if bCosine && ~options.bUnitizated   
+      Unitfea = Unitization(fea);
    end
 %======================= ==========================
         G = zeros(nSmp*(options.k+1),3);  
@@ -21,7 +21,7 @@ function W = ConstructW3(fea,options)
         dump = dump(:,1:options.k+1); 
 %==================================================
     if bCosine
-       dist = Normfea*Normfea'; 
+       dist = Unitfea*Unitfea'; 
        dist = full(dist);
        linidx = (1:nSmp)'; % 3798×1
        dump = dist(sub2ind(size(dist),linidx(:,ones(1,size(idx,2))),idx));  
