@@ -3,8 +3,8 @@
     close all;  
     rng(0)
     idx = randperm(3798);
-    X1 = NormalizeFea(in_X);   
-    X2 = NormalizeFea(pos);
+    X1 = Unitization(in_X);   
+    X2 = Unitization(pos);
     nnClass = 20;     
     GSCA = [];
     NMI = [];
