@@ -4,7 +4,6 @@ function W = ConstructW1(fea,options)
         options.bSelfConnected = 0;   
    end
 %=================================================
-
         nSmp = size(fea,1);  
         G = zeros(nSmp*(options.k+1),3);  
         smpIdx = 1:nSmp;   
