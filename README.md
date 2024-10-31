@@ -4,7 +4,9 @@
 TGR-NMF is an interpretable model for identifying interesting spatial domains that reveal breast cancer progression by using spatial transcriptomic data. TGR-NMF accounts for the impact of dropout events in computation and introduces three graph regularization terms by integrating gene expression count data and positional coordinate information. The workflow for deciphering spatial domains in breast cancer spatial transcriptomics is shown in fig. Firstly, the unitization strategy is adopted to process the gene expression count matrix and position coordinate matrix. Secondly, TGR-NMF is constructed by integrating three distinct graph regularization terms to obtain a low-dimensional representation of the gene expression count data. The construction of these regularization terms involves heat kernel weighting for the gene expression count matrix, cosine similarity and heat kernel weighting for the position matrix. Next, the K-means algorithm is employed to identify the spatial domains based on the obtained low-dimensional representation. Finally, progressive lesion regions of breast cancer are revealed through various downstream analyses.
 # Datasets
 All datasets used in our paper can be found in:
-The first HBRC spatial transcriptomic dataset is collected from the 10x Genomics website at https://www.10xgenomics.com/datasets/human-breast-cancer-block-a-section-1-1-standard-1-1-0. The gold standard of the first HBRC dataset is accessible at https://github.com/JinmiaoChenLab/SEDR_analyses/blob/master/data/BRCA1/metadata.tsv. The second HBRC spatial transcriptomic dataset is downloaded from https://zenodo.org/records/4739739.
+Markdown
+* The first HBRC spatial transcriptomic dataset is collected from the 10x Genomics website at https://www.10xgenomics.com/datasets/human-breast-cancer-block-a-section-1-1-standard-1-1-0. The gold standard of the first HBRC dataset is accessible at https://github.com/JinmiaoChenLab/SEDR_analyses/blob/master/data/BRCA1/metadata.tsv.
+* The second HBRC spatial transcriptomic dataset is downloaded from https://zenodo.org/records/4739739.
 # Usage
 We provided some demos to demonstrate usage of TGR-NMF.
 
