@@ -3,14 +3,14 @@
     close all;  
     rng(0)
     idx = randperm(3798);
-    load('C:/Users/Administrator/Desktop/BRCA_exp.mat') 
-    load('C:/Users/Administrator/Desktop/BRCA_pos2.mat') 
+    load('C:/Users/Administrator/Desktop/in_X.mat') 
+    load('C:/Users/Administrator/Desktop/pos.mat') 
+    load('C:/Users/Administrator/Desktop/true_labs.mat')
     X1 = Unitization(in_X);   
     X2 = Unitization(pos);
     nnClass = 20;     
     GSCA = [];
     NMI = [];
-%% MGNMF
 %============================= Construct W1 ===============================
         options = [];
         options.NeighborMode = 'KNN';  
