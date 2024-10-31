@@ -21,20 +21,20 @@ We provided some demos to demonstrate usage of TGR-NMF.
     nnClass = 20;     
     GSCA = [];
     NMI = [];
-%============================= Construct W1 ===============================
+============================= Construct W1 ===============================
         options = [];
         options.NeighborMode = 'KNN';  
         options.k = 30;    
         options.WeightMode = 'HeatKernel'; 
         options.t = 1;     
     W1 = ConstructW1(X1,options); 
-%============================ Construct W2 ===============================
+============================ Construct W2 ===============================
         options = [];
         options.NeighborMode = 'KNN';   
         options.k = 9;     
         options.WeightMode = 'Cosine'; 
     W2 = ConstructW2(X2,options); 
-%============================= Construct W3 ===============================
+============================= Construct W3 ===============================
         options = [];
         options.NeighborMode = 'KNN';  
         options.k = 9;     
@@ -57,7 +57,7 @@ We provided some demos to demonstrate usage of TGR-NMF.
         options.meanFitRatio = 0.5;   
         [U2, V2] = GNMF_Multi(X1', k, W1, W2, W3, options, U, V');
         [project_labs, center] = Litekmeans(V2, nnClass, 'Start', idx(1:nnClass)); 
-%============================= evaluate ==================================
+============================= evaluate ==================================
         ARI = Cal_ARI(true_labs, project_labs);
         GSCA = GSCA_ClusteringMeasure(true_labs, project_labs);
         
