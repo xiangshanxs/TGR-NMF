@@ -7,7 +7,16 @@ All datasets used in our paper can be found in:
 * The first HBRC spatial transcriptomic dataset is collected from the 10x Genomics website at https://www.10xgenomics.com/datasets/human-breast-cancer-block-a-section-1-1-standard-1-1-0. The gold standard of the first HBRC dataset is accessible at https://github.com/JinmiaoChenLab/SEDR_analyses/blob/master/data/BRCA1/metadata.tsv.
 * The second HBRC spatial transcriptomic dataset is downloaded from https://zenodo.org/records/4739739.
 # Requirements
- 
+ The Demo.m file is the main file. 
+ The Unitization.m file is used to unitize the gene expression count matrix and the spatial position coordinate matrix. 
+ The EuDist2.m file is used to calculate the Euclidean distance between spots. 
+ The ConstructW1.m file is used to calculate the adjacency matrix W1 based on the gene expression count matrix, which is constructed by the heat kernel weighting. 
+ The ConstructW2.m file is used to calculate the adjacency matrix W2 based on the spatial location coordinate matrix, which is constructed by cosine similarity. 
+ The ConstructW3.m file is used to calculate the adjacency matrix W3 based on the spatial location coordinate matrix, which is constructed by heat kernel weighting. 
+ The GNMF_Multi.m file is used to compute the low-dimensional representation matrix V.  
+ The Litekmeans.m file is used to perform kmeans clustering on the low-dimensional representation. 
+ CaI_ARI.m is used to calculate the ARI value. 
+ The GSCA_ClusteringMeasure.m file and the Contingency.m file are used to calculate precision.
 # Usage
 We provided some demos to demonstrate usage of TGR-NMF.
 
