@@ -21,26 +21,28 @@ We provided some demos to demonstrate usage of TGR-NMF.
     nnClass = 20;     
     GSCA = [];
     NMI = [];
-============================= Construct W1 ===============================
+    
+%============================= Construct W1 ===============================
         options = [];
         options.NeighborMode = 'KNN';  
         options.k = 30;    
         options.WeightMode = 'HeatKernel'; 
         options.t = 1;     
     W1 = ConstructW1(X1,options); 
-============================ Construct W2 ===============================
+%============================ Construct W2 ===============================
         options = [];
         options.NeighborMode = 'KNN';   
         options.k = 9;     
         options.WeightMode = 'Cosine'; 
     W2 = ConstructW2(X2,options); 
-============================= Construct W3 ===============================
+%============================= Construct W3 ===============================
         options = [];
         options.NeighborMode = 'KNN';  
         options.k = 9;     
         options.WeightMode = 'HeatKernel'; 
         options.t = 1;    
     W3 = ConstructW3(X2,options);  
+    
       [mFea,nSmp]=size(X1');
       k = 1190;
       U = abs(rand(mFea,k));    
