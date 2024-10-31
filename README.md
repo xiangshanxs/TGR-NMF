@@ -44,7 +44,8 @@ We provided some demos to demonstrate usage of TGR-NMF.
         options.WeightMode = 'HeatKernel'; 
         options.t = 1;    
     W3 = ConstructW3(X2,options);  
-    
+%=============================== TGR-NMF ==================================
+
       [mFea,nSmp]=size(X1');
       k = 1190;
       U = abs(rand(mFea,k));    
@@ -61,7 +62,8 @@ We provided some demos to demonstrate usage of TGR-NMF.
         options.meanFitRatio = 0.5;   
         [U2, V2] = GNMF_Multi(X1', k, W1, W2, W3, options, U, V');
         [project_labs, center] = Litekmeans(V2, nnClass, 'Start', idx(1:nnClass)); 
-============================= evaluate ==================================
+%============================= evaluate ==================================
+
         ARI = Cal_ARI(true_labs, project_labs);
         GSCA = GSCA_ClusteringMeasure(true_labs, project_labs);
         
