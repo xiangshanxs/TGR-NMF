@@ -7,6 +7,7 @@ All datasets used in our paper can be found in:
 The first HBRC spatial transcriptomic dataset is collected from the 10x Genomics website at https://www.10xgenomics.com/datasets/human-breast-cancer-block-a-section-1-1-standard-1-1-0. The gold standard of the first HBRC dataset is accessible at https://github.com/JinmiaoChenLab/SEDR_analyses/blob/master/data/BRCA1/metadata.tsv. The second HBRC spatial transcriptomic dataset is downloaded from https://zenodo.org/records/4739739.
 # Usage
 We provided some demos to demonstrate usage of TGR-NMF.
+
     clc
     clear;
     close all;  
